@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ExpoESCOM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="recursos/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark fixed-top shadow-sm">
+  <div class="container">
+    <a href="https://www.ipn.mx" target="_blank"><img src="recursos/ipn.png" class="logo-ipn" alt="Logo IPN" /></a>
+    <a href="https://www.escom.ipn.mx" target="_blank"><img src="recursos/escom.png" class="logo-escom" alt="Logo ESCOM"/></a>
+    <a class="navbar-brand ms-3 text-white"><strong>ExpoESCOM</strong></a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <i class="bi bi-list" style="color: white;"></i>
+    </button>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link text-white" href="inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="registro.html">Registro</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modalAdmin">Admin</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="login.html">Participantes</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="ganadores.php">Ganadores</a>
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal Administrador-->
+<div class="modal fade" id="modalAdmin" tabindex="-1" aria-labelledby="modalAdminLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="modalAdminLabel">Inicio de sesión - Admin</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Formulario -->
+        <form id="adminLoginForm">
+          <div class="mb-3">
+            <label for="adminCorreo" class="form-label">Correo o usuario</label>
+            <input type="email" class="form-control" id="adminCorreo" name="correo" placeholder="admin@expoescom.com" required/>
+          </div>
+          <div class="mb-3">
+            <label for="adminPassword" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="adminPassword" name="password" placeholder="Tu contraseña" required/>
+          </div>
+          <div id="mensajeError" class="text-danger mb-2" style="display: none;"></div>
+          <button type="submit" class="btn btn-dark w-100">Iniciar sesión</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Participantes -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1>¿Listo para la <span class="highlight fw-bold">ExpoESCOM</span>?</h1>
+        <p class="lead">Participa en los concursos más innovadores de la ESCOM.</p>
+        <div class="mt-4">
+          <a href="registro.html" class="btn btn-outline-dark">Registro</a>
+          <a href="login.html" class="btn btn-outline-dark">Iniciar sesión</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="recursos/inicio.JPG" alt="preview" class="img-fluid app-preview"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto my-5 bg-secondary rounded" style="width: 80%; height: 2px;"></div>
+
+<!-- Slider con cards individuales -->
+<section class="container mt-5">
+  <h2 class="text-center fw-bold" style="color: rgb(80, 146, 227);">Noticias</h2>
+  <p class="text-center text-muted small">Entérate de lo más reciente sobre la tecnología e innovación.</p>
+
+  <div id="noticiasCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <div class="card h-100" style="width: 22rem;">
+            <img src="recursos/noticia1.jpeg" class="card-img-top" alt="Concurso Software">
+            <div class="card-body bg-dark">
+              <h5 class="card-title fw-bold text-white">Científicos chinos desarrollan drones con ‘habilidades de comunicación humana’</h5>
+              <p class="card-text small text-white">Un equipo de científicos chinos desarrollo una flota de drones capaces de comunicarse entre sí de manera similar a un equipo de seres humanos.</p>
+              <a href="https://forbes.com.mx/cientificos-chinos-desarrollan-drones-con-habilidades-de-comunicacion-humana/" class="btn btn-light btn-sm" target="_blank">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="card h-100" style="width: 22rem;">
+            <img src="recursos/noticia2.jpeg" class="card-img-top" alt="Concurso Hardware">
+            <div class="card-body bg-dark">
+              <h5 class="card-title fw-bold text-white">Ericsson muestra las redes móviles del futuro</h5>
+              <p class="card-text small text-white">La capacidad de integrar tecnologías y plataformas de manera fluida es crucial para avanzar hacia un ecosistema más conectado y eficiente.</p>
+              <a href="https://forbes.com.mx/ad-ericsson-muestra-las-redes-moviles-del-futuro/" class="btn btn-light btn-sm" target="_blank">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="card h-100" style="width: 22rem;">
+            <img src="recursos/noticia3.jpeg" class="card-img-top" alt="Innovación Tecnológica">
+            <div class="card-body bg-dark">
+              <h5 class="card-title fw-bold text-white">Así ha sido Forbes Artificial Intelligence Summit 2025</h5>
+              <p class="card-text small text-white">El Hotel Westin Palace Madrid ha reunido este miércoles 21 de mayo a un fuerte cuadro de ponentes en torno a la inteligencia artificial.</p>
+              <a href="https://forbes.es/forbessummit/715776/asi-ha-sido-forbes-artificial-intelligence-summit-2025/" class="btn btn-light btn-sm" target="_blank">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<div class="mx-auto my-5 bg-secondary rounded" style="width: 80%; height: 2px;"></div>
+
+<!-- Panel de administración-->
+<section class="admin">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="recursos/admin.JPG" alt="preview" class="img-fluid app-preview" />
+      </div>
+      <div class="col-md-6 text-center">
+        
+        <h1>Panel de <span class="highlight fw-bold">Administración</h1>
+          <p class="text-center text-muted mb-4">Accede al panel de gestión de usuarios, proyectos y resultados.</p>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalAdmin" class="btn btn-dark px-4 py-2"><i class="bi bi-gear-fill me-2"></i>Ir a administración</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto my-5 bg-secondary rounded" style="width: 80%; height: 2px;"></div>
+
+<!--Panel de Ganadores -->
+<section class="ganadores">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="recursos/ganadores.png" alt="preview" class="img-fluid app-preview" />
+      </div>
+      <div class="col-md-6 text-center">
+        
+        <h1 class="highlight fw-bold">Ganadores</h1>
+          <p class="text-center text-muted mb-4">Conoce a los equipos que destacaron por su creatividad e innovación.</p>
+          <div class="mt-4">
+           
+               <a href="ganadores.php" class="btn btn-dark px-4 py-2">
+    <i class="bi bi-trophy-fill me-2"></i>Ver ganadores
+</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto my-5 bg-secondary rounded" style="width: 80%; height: 2px;"></div>
+
+<!-- GALERIA -->
+
+<h2 class="text-center fw-bold" style="color: rgb(80, 146, 227);">EXPOESCOM 2025</h2>
+<p class="text-center text-muted small">Explora las presentaciones que formaron parte de este espacio de conocimiento e innovación.</p>
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="Concursantes/concursante1.JPG" class="carousel-img" alt="Concursante 1">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante2.JPG" class="carousel-img" alt="Concursante 2">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante3.JPG" class="carousel-img" alt="Concursante 3">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante4.JPG" class="carousel-img" alt="Concursante 4">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante5.JPG" class="carousel-img" alt="Concursante 5">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante6.JPG" class="carousel-img" alt="Concursante 6">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante7.JPG" class="carousel-img" alt="Concursante 7">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante8.JPG" class="carousel-img" alt="Concursante 8">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante9.JPG" class="carousel-img" alt="Concursante 9">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante10.JPG" class="carousel-img" alt="Concursante 10">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante11.JPG" class="carousel-img" alt="Concursante 11">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante12.JPG" class="carousel-img" alt="Concursante 12">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante13.JPG" class="carousel-img" alt="Concursante 13">
+    </div>
+
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante15.JPG" class="carousel-img" alt="Concursante 15">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante16.JPG" class="carousel-img" alt="Concursante 16">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante17.JPG" class="carousel-img" alt="Concursante 17">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante18.JPG" class="carousel-img" alt="Concursante 18">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante19.JPG" class="carousel-img" alt="Concursante 19">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante26.JPG" class="carousel-img" alt="Concursante 26">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante27.JPG" class="carousel-img" alt="Concursante 27">
+    </div>
+
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="Concursantes/concursante28.JPG" class="carousel-img" alt="Concursante 28">
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="mx-auto my-5 bg-secondary rounded" style="width: 80%; height: 2px;"></div>
+
+<!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row d-flex" >
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>ESCOM - IPN</h5>
+                    <p class="mb-0">Unidad Profesional Adolfo López Mateos<br>
+                    Av. Juan de Dios Bátiz s/n, Nueva Industrial Vallejo<br>
+                    Ciudad de México, C.P. 07738</p>
+                </div>
+                <div class="col-md-4 ms-auto">
+                    <h5>Elaborado por</h5>
+                    <ul class="list-unstyled">
+                      <li><i class="bi bi-person"></i> Castillo Avendaño Stephanie Amairany</li>
+                      <li><i class="bi bi-person"></i> García Hernández María Fernanda </li>
+                      <li><i class="bi bi-person"></i> Barranco García Kevin Alexis</li>
+                      <li><i class="bi bi-person"></i> Mora Olvera Abraham</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">© 2025 Equipo 3 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="JS/admin_login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/validacion-admin.js"></script>
+</body>
+</html>

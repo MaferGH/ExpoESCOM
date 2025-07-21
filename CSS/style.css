@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 90px;
+    overflow-x: hidden;
+  }
+
+  .hero-section {
+    background: white;
+    padding: 80px 0;
+  }
+  .highlight {
+    color: rgb(80, 146, 227);
+  }
+
+  .hero-btn {
+    background-color: rgb(27, 49, 91);
+    border-radius: 30px;
+    padding: 10px 30px;
+  }
+  .logo-ipn,
+  .logo-escom,
+  .logo-equipo {
+    height: 60px;
+    margin: 0 10px;
+  }
+  .app-preview {
+    max-width: 460px;
+  }
+
+  @media (max-width: 705px) {
+    .navbar-brand {
+      font-size: 1rem;
+    }
+    .logo-ipn,
+    .logo-escom {
+      height: 40px;
+    }
+    .app-preview {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+  @media (max-width: 454px) {
+    .app-preview {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+
+  }
+
+  .carousel-item {
+    text-align: center;
+    padding: 40px 0;   
+  }
+
+  .carousel-img {
+    max-width: 700px; 
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+  }
+
+  .carousel-control-prev-icon, 
+  .carousel-control-next-icon {
+    filter: invert(1); 
+  }
+.card-winner {
+  border-left: 5px solid #198754;
+  background-color: #f8f9fa;
+}
+
+table td[data-academia] {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ 
